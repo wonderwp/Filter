@@ -23,7 +23,7 @@
         "wonderwp/http-foundation": "dev-develop@dev"
     },
     "autoload": {
-        "psr-4": {"WonderWp\\Component\\Search\\": "src"},
+        "psr-4": {"WonderWp\\Component\\Filter\\": "src"},
         "exclude-from-classmap": [
             "/tests/"
         ]
