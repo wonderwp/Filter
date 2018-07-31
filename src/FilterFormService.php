@@ -2,8 +2,8 @@
 
 namespace WonderWp\Component\Filter;
 
-use function WonderWp\Component\array_diff_recursive;
-use function WonderWp\Component\array_filter_recursive;
+use function WonderWp\Functions\array_diff_recursive;
+use function WonderWp\Functions\array_filter_recursive;
 use WonderWp\Component\DependencyInjection\Container;
 use WonderWp\Component\Form\Field\FieldInterface;
 use WonderWp\Component\Form\Field\HiddenField;
@@ -52,7 +52,7 @@ class FilterFormService implements FilterFormServiceInterface
     public function buildFiltersForm(array $data = [])
     {
         /** @var FormInterface $form */
-        $form = Container::getInstance()->offsetGet('wwp.forms.form');
+        $form = Container::getInstance()->offsetGet('wwp.form.form');
         $form->setName('wwp-bo-filters-form');
 
         $filters = $this->filterService->getFilters();
