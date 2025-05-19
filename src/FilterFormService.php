@@ -149,9 +149,11 @@ class FilterFormService implements FilterFormServiceInterface
         $viewParams = [
             'formStart' => [
                 'method' => 'get',
+                'showFormTag' => 'false'
             ],
             'formEnd'   => [
                 'submitLabel' => 'Filtrer',
+                'showFormTag' => 'false',
             ],
         ];
 
