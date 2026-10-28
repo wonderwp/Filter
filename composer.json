@@ -26,7 +26,8 @@
     "wonderwp/dependency-injection": "dev-feature/php_8",
     "wonderwp/http-foundation": "dev-feature/increase_http_foundation_lib_version",
     "phpunit/phpunit": "^12.0",
-    "wonderwp/form": "dev-feature/increase_validation_lib_version"
+    "wonderwp/form": "dev-feature/increase_validation_lib_version",
+    "wonderwp/functions": "dev-feature/php_8"
   },
   "autoload": {
     "psr-4": {
