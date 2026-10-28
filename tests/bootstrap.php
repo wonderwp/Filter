@@ -20,6 +20,14 @@ if ($autoload === null) {
     exit(1);
 }
 
+$functionsFile = dirname(__DIR__) . '/vendor/wonderwp/functions/src/functions.php';
+if (is_file($functionsFile)) {
+    require_once $functionsFile;
+} else {
+    // Form's AbstractField needs this; form does not pull wonderwp/functions in CI.
+    require_once __DIR__ . '/stub-functions.php';
+}
+
 require_once $autoload;
 
 spl_autoload_register(static function (string $class): void {
