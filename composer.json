@@ -2,7 +2,11 @@
   "name": "wonderwp/filter",
   "description": "WonderWp Filter Component",
   "type": "library",
-  "keywords": ["filter", "WonderWp", "WordPress"],
+  "keywords": [
+    "filter",
+    "WonderWp",
+    "WordPress"
+  ],
   "homepage": "https://github.com/wonderwp/filter",
   "license": "MIT",
   "authors": [
@@ -20,13 +24,26 @@
   },
   "require-dev": {
     "wonderwp/dependency-injection": "dev-feature/php_8",
-    "wonderwp/http-foundation": "dev-feature/increase_http_foundation_lib_version"
+    "wonderwp/http-foundation": "dev-feature/increase_http_foundation_lib_version",
+    "phpunit/phpunit": "^12.0",
+    "wonderwp/form": "dev-feature/increase_validation_lib_version",
+    "wonderwp/functions": "dev-feature/php_8"
   },
   "autoload": {
-    "psr-4": {"WonderWp\\Component\\Filter\\": "src"},
+    "psr-4": {
+      "WonderWp\\Component\\Filter\\": "src"
+    },
     "exclude-from-classmap": [
       "/tests/"
     ]
   },
-  "minimum-stability": "dev"
+  "minimum-stability": "dev",
+  "autoload-dev": {
+    "psr-4": {
+      "WonderWp\\Component\\Filter\\Tests\\": "tests/"
+    }
+  },
+  "scripts": {
+    "test": "phpunit --configuration phpunit.xml.dist"
+  }
 }
